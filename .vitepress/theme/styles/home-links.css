@@ -37,11 +37,12 @@ a.cta.mastering-pinia::before {
   width: 156px;
   height: 100%;
   display: inline-block;
+  background-image: url('/mp-logo.png');
   background-size: 156px;
   background-repeat: no-repeat;
   vertical-align: bottom;
   line-height: normal;
-  transform: translateY(6px);
+  transform: translateY(9px);
 }
 a.cta.mastering-pinia:hover::after {
   animation: none;

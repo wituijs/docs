@@ -1,46 +1,46 @@
 ---
 layout: home
 
-title: Pinia
-titleTemplate: The intuitive store for Vue.js
+title: Wit-ui
+titleTemplate: Large-scale system multi-terminal modular micro-frontend architecture, fully decoupled, independently deployed, and not restricted by the front-end technology framework. Supports large-scale system front-end architecture solutions that integrate multiple subsystems into one main system.
 
 hero:
-  name: Pinia
-  text: The intuitive store for Vue.js
-  tagline: Type Safe, Extensible, and Modular by design. Forget you are even using a store.
+  name: Wit-ui
+  text: Large-scale system multi-terminal Modular micro-frontend architecture
+  tagline: Completely decoupled, independently deployed, and not restricted by the front-end technology framework. Supports large-scale system front-end architecture solutions that integrate multiple subsystems into one main system.
   image:
     src: /logo.png
     alt: Pinia
   actions:
     - theme: brand
       text: Get Started
-      link: /introduction
+      link: https://gitee.com/wit-ui/docs
     - theme: alt
       text: Demo
-      link: https://stackblitz.com/github/piniajs/example-vue-3-vite
+      link: http://demo.wit-ui.com/wit-pharm-main/
     - theme: cta mastering-pinia
       text: ' '
-      link: https://masteringpinia.com
-    - theme: cta vueschool
-      text: Watch Video Introduction
-      link: https://vueschool.io/lessons/introduction-to-pinia?friend=vuerouter&utm_source=pinia&utm_medium=link&utm_campaign=homepage
-    - theme: cta vue-mastery
-      text: Get the Pinia Cheat Sheet
-      link: https://www.vuemastery.com/pinia?coupon=PINIA-DOCS&via=eduardo
+      link: https://www.wit-ui.com/pricing.html
+    # - theme: cta vueschool
+    #   text: Watch Video Introduction
+    #   link: https://vueschool.io/lessons/introduction-to-pinia?friend=vuerouter&utm_source=pinia&utm_medium=link&utm_campaign=homepage
+    # - theme: cta vue-mastery
+    #   text: Get the Pinia Cheat Sheet
+    #   link: https://www.vuemastery.com/pinia?coupon=PINIA-DOCS&via=eduardo
 
 features:
-  - title: 💡 Intuitive
-    details: Stores are as familiar as components. API designed to let you write well organized stores.
-  - title: 🔑 Type Safe
-    details: Types are inferred, which means stores provide you with autocompletion even in JavaScript!
-  - title: ⚙️ Devtools support
-    details: Pinia hooks into Vue devtools to give you an enhanced development experience in both Vue 2 and Vue 3.
-  - title: 🔌 Extensible
-    details: React to store changes and actions to extend Pinia with transactions, local storage synchronization, etc.
-  - title: 🏗 Modular by design
-    details: Build multiple stores and let your bundler code split them automatically.
-  - title: 📦 Extremely light
-    details: Pinia weighs ~1.5kb, you will forget it's even there!
+  - title: 💡 Mainstream front-end technology architecture
+    details: It adopts the latest front-end architecture Vue3+Pinia+Vite+TS+Element-plus, supports JavaScript and TypeScript, and increases development efficiency by 8~10 times.
+  - title: ⚙️ Automatic intelligence
+    details: Automatic import of various components, intelligent checking of TS syntax errors and prompts can give you a better development experience.
+  - title: 🛠️ Integrate dozens of commonly used components
+    details: Unified search area components, table area components and other big data display components, unified UI style, code writing format and rendering performance optimization.
+  - title: 📰 Integrate dozens of product page interactive effects
+    details: There is no need to design effect pictures or produce product prototypes. You can directly write pages on the front end to save project release time. A complex front-end page interaction can be achieved with just a few lines of code.
+  - title: 🖼️ Exquisite UI interface and sophisticated business interaction components
+    details: A total of 5 layouts, 3 themes, and countless color combinations have been completed, covering most usage scenarios. At the same time, large-screen templates and portal templates are integrated to greatly improve development efficiency.
+  - title: 💻 Multi-terminal support
+    details: Responsive adaptation capabilities for all screen sizes (compatible with computers, mobile phones, and tablets), including nwjs (supports Windows XP system) and electron desktop application architecture and uniappx and reactNative mobile application architecture.
 ---
 
 <script setup>

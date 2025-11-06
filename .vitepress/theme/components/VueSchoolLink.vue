@@ -14,7 +14,6 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-
 const { site } = useData()
 const translations = {
   'en-US': 'Watch a free video lesson on Vue School',

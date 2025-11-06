@@ -1,61 +1,54 @@
-## 安装 %{#installation}%
+# 开发配置建议 %{#jianyi}%
 
-用你喜欢的包管理器安装 `pinia`：
+- M1 + 8G 以上配置 Mac 电脑 （强烈推荐使用 Apple Mac Studio 或 Apple MacBook Pro）
+- windows11 + i7 + 16G 内存 + 固态硬盘
+- 开发工具 Vscode 或 WebStorm（请勿使用其他工具）
+- 浏览器调试工具(edge > 99.0.1150.39 或 chrome > 99.0.1150.39)
+
+## 前端开发必备软件 %{#bibei}%
+
+- vscode
+- git
+- node.js 18以上
+
+## vscode插件安装说明 %{#shuoming}%
+
+- windows11安装node：[node-v18.20.4-x64](https://nodejs.org/download/release/v18.20.4/node-v18.20.4-x64.msi)
+- vscode中文版插件：Chinese (Simplified)（可不安装）
+- vscode快速生成语法糖模板: element-plus-helper（vue页面中输入wit-指令即可快速生成语法糖模板/输入el-快速生成代码）（必须安装）
+- vscode代码校验: Eslint（必须安装）
+- css编译时格式校验: stylelint（必须安装）
+- vue3 Ts格式化: Vue - Official（必须安装）
+- import 引入自动补全: Auto Import（必须安装）
+- 自动补全 html 标签: Auto Close Tag（推荐安装）
+- 自动重命名 html 标签: Auto Rename Tag（推荐安装）
+- 查看你引入的依赖模块大小: Import Cost（可不安装）
+- 查查看 git 提交历史: Git History（可不安装）
 
 ```bash
-yarn add pinia
-# 或者使用 npm
-npm install pinia
+# 克隆项目
+git clone https://www.....com/wit-ui/wit-pharm-main.git
+
+# 安装pnpm
+npm install -g pnpm
+
+# 安装依赖（pnpm、yarn、cnpm、npm均可，推荐用pnpm）
+pnpm i
+
+# 本地开发
+pnpm run dev
+
+# 打包生产环境
+pnpm run build:pro
+
+# 打包测试环境
+pnpm run build:test
+
+# 打包开发环境
+pnpm run build:dev
+
 ```
 
 :::tip
-如果你的应用使用的 Vue 版本低于 2.7，你还需要安装组合式 API 包：`@vue/composition-api`。如果你使用的是 Nuxt，你应该参考[这篇指南](/ssr/nuxt.md)。
+如果在本地调试微前端应用时，须要在主应用的 `env.development` 文件里配置 `VITE_APP_WUJIE_HOST` 参数为本地子应用ip地址，带http协议与端口。此配置，只有开发环境有效，生产与测试环境无须配置无效。
 :::
-
-如果你正在使用 Vue CLI，你可以试试这个[**非官方插件**](https://github.com/wobsoriano/vue-cli-plugin-pinia)。
-
-创建一个 pinia 实例 (根 store) 并将其传递给应用：
-
-```js {2,5-6,8}
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
-
-const pinia = createPinia()
-const app = createApp(App)
-
-app.use(pinia)
-app.mount('#app')
-```
-
-如果你使用的是 Vue 2，你还需要安装一个插件，并在应用的根部注入创建的 `pinia`：
-
-```js {1,3-4,12}
-import { createPinia, PiniaVuePlugin } from 'pinia'
-
-Vue.use(PiniaVuePlugin)
-const pinia = createPinia()
-
-new Vue({
-  el: '#app',
-  // 其他配置...
-  // ...
-  // 请注意，同一个`pinia'实例
-  // 可以在同一个页面的多个 Vue 应用中使用。 
-  pinia,
-})
-```
-
-这样才能提供 devtools 的支持。在 Vue 3 中，一些功能仍然不被支持，如 time traveling 和编辑，这是因为 vue-devtools 还没有相关的 API，但 devtools 也有很多针对 Vue 3 的专属功能，而且就开发者的体验来说，Vue 3 整体上要好得多。在 Vue 2 中，Pinia 使用的是 Vuex 的现有接口 (因此不能与 Vuex 一起使用) 。
-
-## Store 是什么？%{#what-is-a-store}%
-
-Store (如 Pinia) 是一个保存状态和业务逻辑的实体，它并不与你的组件树绑定。换句话说，**它承载着全局状态**。它有点像一个永远存在的组件，每个组件都可以读取和写入它。它有**三个概念**，[state](./core-concepts/state.md)、[getter](./core-concepts/getters.md) 和 [action](./core-concepts/actions.md)，我们可以假设这些概念相当于组件中的 `data`、 `computed` 和 `methods`。
-
-## 应该在什么时候使用 Store? %{#when-should-i-use-a-store}%
-
-一个 Store 应该包含可以在整个应用中访问的数据。这包括在许多地方使用的数据，例如显示在导航栏中的用户信息，以及需要通过页面保存的数据，例如一个非常复杂的多步骤表单。
-
-另一方面，你应该避免在 Store 中引入那些原本可以在组件中保存的本地数据，例如，一个元素在页面中的可见性。
-
-并非所有的应用都需要访问全局状态，但如果你的应用确实需要一个全局状态，那 Pinia 将使你的开发过程更轻松。

@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a4 as i}from"./chunks/framework.CPmXagkw.js";const u=JSON.parse('{"title":"API 文档","description":"","frontmatter":{},"headers":[],"relativePath":"api/index.md","filePath":"api/index.md"}'),n={name:"api/index.md"},o=i("",4),l=[o];function s(d,r,_,c,p,m){return t(),e("div",null,l)}const f=a(n,[["render",s]]);export{u as __pageData,f as default};

@@ -177,5 +177,3 @@ module.exports {
   ]
 }
 ```
-
-It is also recommended to give [the dedicated Nuxt section](../ssr/nuxt.md) a read.

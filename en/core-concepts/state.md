@@ -223,7 +223,7 @@ store.$state = { count: 24 }
 store.$patch({ count: 24 })
 ```
 
-You can also **set the initial state** of your whole application by changing the `state` of the `pinia` instance. This is used during [SSR for hydration](../ssr/#state-hydration).
+You can also **set the initial state** of your whole application by changing the `state` of the `pinia` instance. This is used during
 
 ```js
 pinia.state.value = {}

@@ -59,7 +59,7 @@ export const useVideoPlayer = defineStore('video', () => {
 
 ## 服务端渲染 %{#ssr}%
 
-当处理[服务端渲染](../ssr/index.md)时，你有一些需要额外注意的内容，以便在 store 中使用组合式函数。
+当处理服务端渲染时，你有一些需要额外注意的内容，以便在 store 中使用组合式函数。
 
 在 [Option Store](#option-stores) 中，你需要定义一个 `hydrate()` 函数。当 store 在客户端 (浏览器) 上被实例化的过程中，创建 store 时有一个可用的初始状态时，这个函数就会被调用。我们需要定义这个函数的原因是，在这种情况下，`state()` 是不会被调用的。
 

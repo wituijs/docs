@@ -63,7 +63,7 @@ Differently from regular state, `ref<HTMLVideoElement>()` contains a non-seriali
 
 ## SSR
 
-When dealing with [Server Side Rendering](../ssr/index.md), you need to take care of some extra steps in order to use composables within your stores.
+When dealing with Server Side Rendering, you need to take care of some extra steps in order to use composables within your stores.
 
 In [Option Stores](#option-stores), you need to define a `hydrate()` function. This function is called when the store is instantiated on the client (the browser) when there is an initial state available at the time the store is created. The reason we need to define this function is because in such scenario, `state()` is not called.
 

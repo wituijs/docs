@@ -175,5 +175,3 @@ module.exports {
   ]
 }
 ```
-
-[Nuxt 专属章节](../ssr/nuxt.md)也值得一读。

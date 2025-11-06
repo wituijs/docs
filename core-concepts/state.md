@@ -220,7 +220,7 @@ store.$state = { count: 24 }
 store.$patch({ count: 24 })
 ```
 
-你也可以通过变更 `pinia` 实例的 `state` 来设置整个应用的初始 state。这常用于 [SSR 中的激活过程](../ssr/#state-hydration)。
+你也可以通过变更 `pinia` 实例的 `state` 来设置整个应用的初始 state。这常用于SSR 中的激活过程。
 
 ```js
 pinia.state.value = {}

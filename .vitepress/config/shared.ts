@@ -1,7 +1,7 @@
 import { defineConfig, HeadConfig } from 'vitepress'
 import { zhSearch } from './zh'
 
-export const META_IMAGE = 'https://pinia.vuejs.org/social.png'
+export const META_IMAGE = ''
 export const isProduction =
   process.env.NETLIFY && process.env.CONTEXT === 'production'
 
@@ -31,9 +31,9 @@ export const slugify = (str: string): string =>
     .replace(/^(\d)/, '_$1')
 
 export const sharedConfig = defineConfig({
-  base: "/docs/dist/",
+  // base: "./",
   outDir: 'dist',
-  title: 'Wit-system',
+  title: 'Wit-ui',
   appearance: 'dark',
 
   markdown: {
@@ -84,25 +84,19 @@ export const sharedConfig = defineConfig({
       },
     ],
 
+    // 爱站统计
     [
       'script',
-      {
-        src: 'https://cdn.usefathom.com/script.js',
-        'data-site': 'KFPPRRIS',
-        'data-spa': 'auto',
-        defer: '',
-      },
-    ],
-
-    // Vue School Top banner
-    [
-      'script',
-      {
-        src: 'https://vueschool.io/banner.js?affiliate=vuerouter&type=top',
-        // @ts-expect-error: vitepress bug
-        async: true,
-        type: 'text/javascript',
-      },
+      {},
+      `
+      var _mtj = _mtj || [];
+      (function () {
+      var mtj = document.createElement("script");
+      mtj.src = "https://node68.aizhantj.com:21233/tjjs/?k=q8m2dyyx858";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mtj, s);
+      })();
+      `,
     ],
 
     ...(isProduction ? productionHead : []),
@@ -113,20 +107,20 @@ export const sharedConfig = defineConfig({
     outline: [2, 3],
 
     socialLinks: [
-      { icon: 'x', link: 'https://twitter.com/posva' },
+      // { icon: 'x', link: 'https://twitter.com/posva' },
       {
         icon: 'github',
-        link: 'https://github.com/vuejs/pinia',
+        link: 'https://www.gitee.com/wit-ui/docs',
       },
-      {
-        icon: 'discord',
-        link: 'https://chat.vuejs.org',
-      },
+      // {
+      //   icon: 'discord',
+      //   link: 'https://chat.vuejs.org',
+      // },
     ],
 
     footer: {
-      copyright: 'Copyright © 2019-present Eduardo San Martin Morote',
-      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024 Wit-ui All Rights Reserved',
+      message: '湘ICP备2024070110号',
     },
 
     editLink: {
@@ -137,9 +131,9 @@ export const sharedConfig = defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: '69Y3N7LHI2',
-        apiKey: '45441f4b65a2f80329fd45c7cb371fea',
-        indexName: 'pinia',
+        appId: 'JBX2ZJ89K9',
+        apiKey: '78a0466ad2b7506c2112531f76b2a921',
+        indexName: 'wit-ui',
         locales: { ...zhSearch },
       },
     },

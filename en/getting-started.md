@@ -14,14 +14,14 @@ npm install pinia
 ```
 
 :::tip
-If your app is using Vue <2.7, you also need to install the composition api: `@vue/composition-api`. If you are using Nuxt, you should follow [these instructions](/ssr/nuxt.md).
+If your app is using Vue <2.7, you also need to install the composition api: `@vue/composition-api`. If you are using Nuxt, you should follow.
 :::
 
 If you are using the Vue CLI, you can instead give this [**unofficial plugin**](https://github.com/wobsoriano/vue-cli-plugin-pinia) a try.
 
 Create a pinia instance (the root store) and pass it to the app as a plugin:
 
-```js {2,5-6,8}
+```js {1,5-6,8}
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'

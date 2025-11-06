@@ -15,11 +15,11 @@
         size="24"
       />
 
-      <div class="cta">
+      <!-- <div class="cta">
         <a class="become-sponsor" href="https://github.com/sponsors/posva">{{
           translations[site.lang] || translations.en
         }}</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -31,7 +31,6 @@ import { useData } from 'vitepress'
 
 const { site } = useData()
 const translations = {
-  en: 'Become a sponsor',
   'en-US': 'Become a Sponsor!',
   'zh-CN': '成为赞助者！',
 }

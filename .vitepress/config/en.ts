@@ -1,9 +1,10 @@
 import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
 
-export const META_URL = 'https://pinia.vuejs.org'
+export const META_URL = ''
 export const META_TITLE = 'Pinia 🍍'
-export const META_DESCRIPTION =
-  'Intuitive, type safe, light and flexible Store for Vue'
+export const META_DESCRIPTION = '值得你喜欢的 Vue Store'
+// TODO: translation of this
+// 'Intuitive, type safe, light and flexible Store for Vue'
 
 export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
   description: META_DESCRIPTION,
@@ -17,134 +18,109 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/vuejs/pinia/edit/v2/packages/docs/:path',
+      pattern: 'https://gitee.com/wit-ui/docs/issues',
       text: 'Suggest changes to this page',
     },
 
     nav: [
-      // { text: 'Config', link: '/config/' },
-      // { text: 'Plugins', link: '/plugins/' },
       {
-        text: 'Guide',
-        link: '/core-concepts/',
-        activeMatch: '^/core-concepts/',
+        text: 'guide',
+        link: '/en/core-concepts/',
+        activeMatch: '^/en/core-concepts/',
       },
-      { text: 'API', link: '/api/', activeMatch: '^/api/' },
-      { text: 'Cookbook', link: '/cookbook/', activeMatch: '^/cookbook/' },
+      { text: 'API', link: '/en/api/', activeMatch: '^/en/api/' },
+      { text: 'Cookbook', link: '/en/cookbook/', activeMatch: '^/en/cookbook/' },
       {
         text: 'Links',
         items: [
           {
             text: 'Discussions',
-            link: 'https://github.com/vuejs/pinia/discussions',
+            link: 'https://www.gitee.com/wit-ui/docs/issues',
           },
           {
             text: 'Changelog',
-            link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md',
-          },
-          {
-            text: 'Vue.js Certification',
-            link: 'https://certificates.dev/vuejs/?friend=VUEROUTER&utm_source=pinia_vuejs&utm_medium=link&utm_campaign=pinia_vuejs_links&utm_content=navbar',
+            link: 'https://www.gitee.com/wit-ui/docs/blob/master/CHANGELOG.md',
           },
         ],
       },
     ],
-
     sidebar: {
-      '/api/': [
+      '/en/api/': [
         {
           text: 'packages',
           items: [
-            { text: 'pinia', link: '/api/modules/pinia.html' },
-            { text: '@pinia/nuxt', link: '/api/modules/pinia_nuxt.html' },
+            { text: 'pinia', link: '/en/api/modules/pinia.html' },
+            { text: '@pinia/nuxt', link: '/en/api/modules/pinia_nuxt.html' },
             {
               text: '@pinia/testing',
-              link: '/api/modules/pinia_testing.html',
+              link: '/en/api/modules/pinia_testing.html',
             },
           ],
         },
       ],
-      // catch-all fallback
-      '/': [
+      '/en/': [
         {
-          text: 'Introduction',
+          text: '介绍',
           items: [
             {
-              text: 'What is Pinia?',
-              link: '/introduction.html',
+              text: 'Pinia 是什么？',
+              link: '/en/introduction.html',
             },
             {
-              text: 'Getting Started',
-              link: '/getting-started.html',
+              text: '开始',
+              link: '/en/getting-started.html',
             },
           ],
         },
         {
-          text: 'Core Concepts',
+          text: '核心概念',
           items: [
-            { text: 'Defining a Store', link: '/core-concepts/' },
-            { text: 'State', link: '/core-concepts/state.html' },
-            { text: 'Getters', link: '/core-concepts/getters.html' },
-            { text: 'Actions', link: '/core-concepts/actions.html' },
-            { text: 'Plugins', link: '/core-concepts/plugins.html' },
+            { text: '定义 Store', link: '/en/core-concepts/' },
+            { text: 'State', link: '/en/core-concepts/state.html' },
+            { text: 'Getter', link: '/en/core-concepts/getters.html' },
+            { text: 'Action', link: '/en/core-concepts/actions.html' },
+            { text: '插件', link: '/en/core-concepts/plugins.html' },
             {
-              text: 'Stores outside of components',
-              link: '/core-concepts/outside-component-usage.html',
+              text: '组件外的 Store',
+              link: '/en/core-concepts/outside-component-usage.html',
             },
           ],
         },
         {
-          text: 'Server-Side Rendering (SSR)',
-          items: [
-            {
-              text: 'Vue and Vite',
-              link: '/ssr/',
-            },
-            {
-              text: 'Nuxt.js',
-              link: '/ssr/nuxt.html',
-            },
-          ],
-        },
-        {
-          text: 'Cookbook',
+          text: '手册',
           collapsed: false,
           items: [
             {
-              text: 'Index',
-              link: '/cookbook/',
+              text: '目录',
+              link: '/en/cookbook/',
             },
             {
-              text: 'Migration from Vuex ≤4',
-              link: '/cookbook/migration-vuex.html',
+              text: '从 Vuex ≤4 迁移',
+              link: '/en/cookbook/migration-vuex.html',
             },
             {
-              text: 'Hot Module Replacement',
-              link: '/cookbook/hot-module-replacement.html',
+              text: '热更新',
+              link: '/en/cookbook/hot-module-replacement.html',
             },
             {
-              text: 'Testing',
-              link: '/cookbook/testing.html',
+              text: '测试',
+              link: '/en/cookbook/testing.html',
             },
             {
-              text: 'Usage without setup()',
-              link: '/cookbook/options-api.html',
+              text: '不使用 setup() 的用法',
+              link: '/en/cookbook/options-api.html',
             },
             {
-              text: 'Composing Stores',
-              link: '/cookbook/composing-stores.html',
+              text: '组合式 Stores',
+              link: '/en/cookbook/composing-stores.html',
             },
             {
-              text: 'VSCode Snippets',
-              link: '/cookbook/vscode-snippets.html',
+              text: '从 v0/v1 迁移至 v2',
+              link: '/en/cookbook/migration-v1-v2.html',
             },
             {
-              text: 'Migration from v0/v1 to v2',
-              link: '/cookbook/migration-v1-v2.html',
-            },
-            {
-              text: 'Dealing with composables',
-              link: '/cookbook/composables.html',
+              text: '处理组合式函数',
+              link: '/en/cookbook/composables.html',
             },
           ],
         },

@@ -1,5 +1,5 @@
 <template>
-  <h3>{{ name }} Sponsors</h3>
+  <h3>{{translations[site.lang]}}</h3>
 
   <p>
     <a
@@ -32,6 +32,7 @@
 import sponsors from './sponsors.json'
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+const { site } = useData()
 
 const props = withDefaults(
   defineProps<{
@@ -51,6 +52,10 @@ const list = computed(() =>
     imgSrc: isDark.value ? sponsor.imgSrcDark : sponsor.imgSrcLight,
   }))
 )
+const translations = {
+  'en-US': 'Silver Sponsors',
+  'zh': '赞助商',
+}
 </script>
 
 <style scoped>

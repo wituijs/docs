@@ -2,12 +2,13 @@ import { h } from 'vue'
 import { type Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import AsideSponsors from './components/AsideSponsors.vue'
-// import AsideSponsors from './components/AsideSponsors.vue'
 import TranslationStatus from 'vitepress-translation-helper/ui/TranslationStatus.vue'
 import './styles/vars.css'
+import './styles/home-links.css'
 import './styles/playground-links.css'
 import VueSchoolLink from './components/VueSchoolLink.vue'
 import VueMasteryLogoLink from './components/VueMasteryLogoLink.vue'
+import MasteringPiniaLink from './components/MasteringPiniaLink.vue'
 import status from '../translation-status.json'
 
 const i18nLabels = {
@@ -28,6 +29,7 @@ const theme: Theme = {
   enhanceApp({ app }) {
     app.component('VueSchoolLink', VueSchoolLink)
     app.component('VueMasteryLogoLink', VueMasteryLogoLink)
+    app.component('MasteringPiniaLink', MasteringPiniaLink)
   },
 }
 

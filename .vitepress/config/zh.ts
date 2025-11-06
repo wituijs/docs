@@ -1,8 +1,8 @@
 import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
 
-export const META_URL = 'https://pinia.vuejs.org'
-export const META_TITLE = 'Pinia 🍍'
-export const META_DESCRIPTION = '值得你喜欢的 Vue Store'
+export const META_URL = ''
+export const META_TITLE = 'Wit-ui 前端框架'
+export const META_DESCRIPTION = '值得你喜欢的 Wit-ui 前端框架'
 // TODO: translation of this
 // 'Intuitive, type safe, light and flexible Store for Vue'
 
@@ -18,7 +18,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/vuejs/pinia/edit/v2/packages/docs/:path',
+      pattern: 'https://gitee.com/wit-ui/docs/issues',
       text: '对本页提出修改建议',
     },
 
@@ -32,126 +32,181 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     },
 
     nav: [
-      // { text: 'Config', link: '/config/' },
-      // { text: 'Plugins', link: '/plugins/' },
       {
-        text: '指南',
-        link: '/zh/core-concepts/',
-        activeMatch: '^/zh/core-concepts/',
+        text: '介绍',
+        link: '/introduction.html',
+        activeMatch: '^/introduction.html',
       },
-      { text: 'API', link: '/zh/api/', activeMatch: '^/zh/api/' },
-      { text: '手册', link: '/zh/cookbook/', activeMatch: '^/zh/cookbook/' },
+      {
+        text: '快速开始',
+        link: '/getting-started.html',
+        activeMatch: '^/getting-started.html',
+      },
+      {
+        text: '参考文档',
+        link: '/core-concepts/',
+        activeMatch: '^/core-concepts/',
+      },
+      // { text: '手册', link: '/cookbook/', activeMatch: '^/cookbook/' },
       {
         text: '相关链接',
         items: [
           {
-            text: '论坛',
-            link: 'https://github.com/vuejs/pinia/discussions',
+            text: '问题解答',
+            link: 'https://www.gitee.com/wit-ui/docs/issues',
           },
           {
             text: '更新日志',
-            link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md',
-          },
-          {
-            text: 'Vue.js 认证',
-            link: 'https://certificates.dev/vuejs/?friend=VUEROUTER&utm_source=pinia_vuejs&utm_medium=link&utm_campaign=pinia_vuejs_links&utm_content=navbar',
+            link: 'https://www.gitee.com/wit-ui/docs/blob/master/CHANGELOG.md',
           },
         ],
       },
     ],
     sidebar: {
-      '/zh/api/': [
+      '/api/': [
         {
           text: 'packages',
           items: [
-            { text: 'pinia', link: '/zh/api/modules/pinia.html' },
-            { text: '@pinia/nuxt', link: '/zh/api/modules/pinia_nuxt.html' },
+            { text: 'pinia', link: '/api/modules/pinia.html' },
+            { text: '@pinia/nuxt', link: '/api/modules/pinia_nuxt.html' },
             {
               text: '@pinia/testing',
-              link: '/zh/api/modules/pinia_testing.html',
+              link: '/api/modules/pinia_testing.html',
             },
           ],
         },
       ],
-      '/zh/': [
+      '/': [
         {
           text: '介绍',
           items: [
             {
-              text: 'Pinia 是什么？',
-              link: '/zh/introduction.html',
+              text: 'Wit-ui 是什么？',
+              link: '/introduction.html',
             },
             {
               text: '开始',
-              link: '/zh/getting-started.html',
+              link: '/getting-started.html',
             },
           ],
         },
         {
-          text: '核心概念',
+          text: '业务组件',
           items: [
-            { text: '定义 Store', link: '/zh/core-concepts/' },
-            { text: 'State', link: '/zh/core-concepts/state.html' },
-            { text: 'Getter', link: '/zh/core-concepts/getters.html' },
-            { text: 'Action', link: '/zh/core-concepts/actions.html' },
-            { text: '插件', link: '/zh/core-concepts/plugins.html' },
-            {
-              text: '组件外的 Store',
-              link: '/zh/core-concepts/outside-component-usage.html',
-            },
+            { text: 'witSeach 搜索', link: '/core-concepts/' },
+            { text: 'witTable 表格', link: '/core-concepts/witTable.html' },
+            { text: 'witPagination 分页', link: '/core-concepts/witPagination.html' },
+            { text: 'witSteps 步骤条', link: '/core-concepts/witSteps.html' },
+            { text: 'witTree 树形', link: '/core-concepts/witTree.html' },
+            { text: 'witEditor AI富文本', link: '/core-concepts/witEditor.html' },
+            { text: 'witDeepseek AI对话框', link: '/core-concepts/witDeepseek.html' },
+            { text: 'witChart 图表', link: '/core-concepts/default.html' },
+            { text: 'witCity 城市选择', link: '/core-concepts/default.html' },
+            { text: 'witConfirm 确认弹框', link: '/core-concepts/default.html' },
+            { text: 'witContextMenu 右键菜单', link: '/core-concepts/default.html' },
+            { text: 'witCount 数字格式化', link: '/core-concepts/default.html' },
+            { text: 'witDataSelector 日期选择', link: '/core-concepts/default.html' },
+            { text: 'witDesignForm 表单设计器', link: '/core-concepts/default.html' },
+            { text: 'witFullScreenProgress 进度条', link: '/core-concepts/default.html' },
+            { text: 'witIconSelector 图标选择器', link: '/core-concepts/default.html' },
+            { text: 'witMagnifier 放大镜', link: '/core-concepts/default.html' },
+            { text: 'witMdEditor md文件解析器', link: '/core-concepts/default.html' },
+            { text: 'witPaneSplit 分屏', link: '/core-concepts/default.html' },
+            { text: 'witPrint 打印', link: '/core-concepts/default.html' },
+            { text: 'witQrCode 二维码生成', link: '/core-concepts/default.html' },
+            { text: 'witResultNotify 结果提示', link: '/core-concepts/default.html' },
+            { text: 'witSplit 拖拽分屏', link: '/core-concepts/default.html' },
+            { text: 'witTooltip 提示', link: '/core-concepts/default.html' },
+            { text: 'witUpdate 上传', link: '/core-concepts/default.html' },
           ],
         },
         {
-          text: '服务端渲染 (SSR)',
+          text: '通用组件',
           items: [
-            {
-              text: 'Vue 与 Vite',
-              link: '/zh/ssr/',
-            },
-            {
-              text: 'Nuxt.js',
-              link: '/zh/ssr/nuxt.html',
-            },
+            { text: 'witApp 入口', link: '/core-concepts/default.html' },
+            { text: 'witAppMain 入口路由', link: '/core-concepts/default.html' },
+            { text: 'witAvatar 头像', link: '/core-concepts/default.html' },
+            { text: 'witBreadcrumb 面包屑', link: '/core-concepts/default.html' },
+            { text: 'witCard 卡片', link: '/core-concepts/default.html' },
+            { text: 'witChangePassword 修改密码', link: '/core-concepts/default.html' },
+            { text: 'witColorfulCard 多彩卡片', link: '/core-concepts/default.html' },
+            { text: 'witColorPicker 取色', link: '/core-concepts/default.html' },
+            { text: 'witColumnBar 选项卡', link: '/core-concepts/default.html' },
+            { text: 'witDark 黑白切换', link: '/core-concepts/default.html' },
+            { text: 'witDeepseekIcon deepSeek入口', link: '/core-concepts/default.html' },
+            { text: 'witDialog 弹框提示', link: '/core-concepts/default.html' },
+            { text: 'witDivider 分割线', link: '/core-concepts/default.html' },
+            { text: 'witErrorLog 错误日志', link: '/core-concepts/default.html' },
+            { text: 'witFallBar 瀑布菜单', link: '/core-concepts/default.html' },
+            { text: 'witFold 展开合并', link: '/core-concepts/default.html' },
+            { text: 'witFooter 底部', link: '/core-concepts/default.html' },
+            { text: 'witHeader 头部', link: '/core-concepts/default.html' },
+            { text: 'witFullscreen 全屏', link: '/core-concepts/default.html' },
+            { text: 'witIcon 图标', link: '/core-concepts/default.html' },
+            { text: 'witIM IM入口', link: '/core-concepts/default.html' },
+            { text: 'witLanguage 国际化', link: '/core-concepts/default.html' },
+            { text: 'witLink 链接', link: '/core-concepts/default.html' },
+            { text: 'witLock 锁屏', link: '/core-concepts/default.html' },
+            { text: 'witLogo logo图标', link: '/core-concepts/default.html' },
+            { text: 'witMenu 菜单', link: '/core-concepts/default.html' },
+            { text: 'witMount 预加载', link: '/core-concepts/default.html' },
+            { text: 'witNav 顶部navBar', link: '/core-concepts/default.html' },
+            { text: 'witNotice 通知', link: '/core-concepts/default.html' },
+            { text: 'witQueryForm 表单', link: '/core-concepts/default.html' },
+            { text: 'witRefresh 刷新', link: '/core-concepts/default.html' },
+            { text: 'witRightTools 工具栏', link: '/core-concepts/default.html' },
+            { text: 'witRouterView 路由切换', link: '/core-concepts/default.html' },
+            { text: 'witSearchFunction 功能搜索', link: '/core-concepts/default.html' },
+            { text: 'witSelectSite 站点选择', link: '/core-concepts/default.html' },
+            { text: 'witSideBar 左侧菜单', link: '/core-concepts/default.html' },
+            { text: 'witStatistics 访问量统计', link: '/core-concepts/default.html' },
+            { text: 'witTabs 多标签页', link: '/core-concepts/default.html' },
+            { text: 'witTheme 主题', link: '/core-concepts/default.html' },
+            { text: 'witLayoutColumn 分栏布局', link: '/core-concepts/default.html' },
+            { text: 'witLayoutComprehensive 综合布局', link: '/core-concepts/default.html' },
+            { text: 'witLayoutFall 瀑布流布局', link: '/core-concepts/default.html' },
+            { text: 'witLayoutHorizontal 横向布局', link: '/core-concepts/default.html' },
+            { text: 'witLayoutVertical 纵向布局', link: '/core-concepts/default.html' },
           ],
         },
-        {
-          text: '手册',
-          collapsed: false,
-          items: [
-            {
-              text: '目录',
-              link: '/zh/cookbook/',
-            },
-            {
-              text: '从 Vuex ≤4 迁移',
-              link: '/zh/cookbook/migration-vuex.html',
-            },
-            {
-              text: '热更新',
-              link: '/zh/cookbook/hot-module-replacement.html',
-            },
-            {
-              text: '测试',
-              link: '/zh/cookbook/testing.html',
-            },
-            {
-              text: '不使用 setup() 的用法',
-              link: '/zh/cookbook/options-api.html',
-            },
-            {
-              text: '组合式 Stores',
-              link: '/zh/cookbook/composing-stores.html',
-            },
-            {
-              text: '从 v0/v1 迁移至 v2',
-              link: '/zh/cookbook/migration-v1-v2.html',
-            },
-            {
-              text: '处理组合式函数',
-              link: '/zh/cookbook/composables.html',
-            },
-          ],
-        },
+        // {
+        //   text: '手册',
+        //   collapsed: false,
+        //   items: [
+        //     {
+        //       text: '目录',
+        //       link: '/cookbook/',
+        //     },
+        //     {
+        //       text: '从 Vuex ≤4 迁移',
+        //       link: '/cookbook/migration-vuex.html',
+        //     },
+        //     {
+        //       text: '热更新',
+        //       link: '/cookbook/hot-module-replacement.html',
+        //     },
+        //     {
+        //       text: '测试',
+        //       link: '/cookbook/testing.html',
+        //     },
+        //     {
+        //       text: '不使用 setup() 的用法',
+        //       link: '/cookbook/options-api.html',
+        //     },
+        //     {
+        //       text: '组合式 Stores',
+        //       link: '/cookbook/composing-stores.html',
+        //     },
+        //     {
+        //       text: '从 v0/v1 迁移至 v2',
+        //       link: '/cookbook/migration-v1-v2.html',
+        //     },
+        //     {
+        //       text: '处理组合式函数',
+        //       link: '/cookbook/composables.html',
+        //     },
+        //   ],
+        // },
       ],
     },
   },

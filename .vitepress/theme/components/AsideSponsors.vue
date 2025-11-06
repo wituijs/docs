@@ -1,25 +1,39 @@
 <template>
-  <a
+
+<a
     class="banner mp"
-    href="https://masteringpinia.com?utm=pinia-sidebar"
+    href="https://gitee.com/wit-ui/docs"
     target="_blank"
   >
     <span>
-      <p class="extra-info">Complete guide to</p>
-      <p class="heading">Mastering Pinia</p>
-      <p class="extra-info">written by its creator</p>
+      <p class="extra-info">设计文档</p>
+      <p class="heading">获取Wit-ui架构</p>
+      <p class="extra-info">问题解答</p>
+    </span>
+  </a>
+
+
+  <a
+    class="banner mp"
+    href="https://qm.qq.com/cgi-bin/qm/qr?k=64jaoJdFLor7Adjd6vVPNTrJh6uZEvIV&jump_from=webapi&authKey=sORB9CvduAj/DYPf9tqg6IR5XNj+Tbrl/MfWR+iBSN0Y1SZlH0njL0PcasQqusMK"
+    target="_blank"
+  >
+    <span>
+      <p class="extra-info">同道中人</p>
+      <p class="heading">QQ技术交流群：379224645</p>
+      <p class="extra-info">问题解答</p>
     </span>
   </a>
 
   <a
     class="banner cert"
-    href="https://certificates.dev/vuejs/?friend=VUEROUTER&utm_source=pinia_vuejs&utm_medium=link&utm_campaign=pinia_vuejs_links&utm_content=sidebar"
+    href="https://www.wit-ui.com/pricing.html"
     target="_blank"
   >
     <span>
-      <p class="extra-info">The official</p>
-      <p class="heading">Vue.js Certification</p>
-      <p class="extra-info">Get certified!</p>
+      <p class="extra-info">获取源码</p>
+      <p class="heading">作者微信：wit-ui</p>
+      <p class="extra-info">问题解答</p>
     </span>
   </a>
 </template>
@@ -94,5 +108,11 @@
 
 .banner:hover .extra-info {
   opacity: 0.9;
+}
+</style>
+
+<style>
+.VPDocAsideCarbonAds{
+  display:none;
 }
 </style>
