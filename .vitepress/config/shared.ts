@@ -110,7 +110,7 @@ export const sharedConfig = defineConfig({
       // { icon: 'x', link: 'https://twitter.com/posva' },
       {
         icon: 'github',
-        link: 'https://www.gitee.com/wit-ui/docs',
+        link: 'https://github.com/wituijs/docs',
       },
       // {
       //   icon: 'discord',
@@ -124,7 +124,7 @@ export const sharedConfig = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/vuejs/pinia/edit/v2/packages/docs/:path',
+      pattern: 'https://github.com/wituijs/docs',
       text: 'Suggest changes',
     },
 

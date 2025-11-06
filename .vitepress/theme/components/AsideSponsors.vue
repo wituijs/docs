@@ -2,7 +2,7 @@
 
 <a
     class="banner mp"
-    href="https://gitee.com/wit-ui/docs"
+    href="https://github.com/wituijs/docs"
     target="_blank"
   >
     <span>

@@ -47,7 +47,7 @@
 # 查查看 git 提交历史:Git History（可不安装）
 
 # 克隆项目
-git clone https://gitee.com/wit-ui/wit-pharm-main.git
+git clone https://github.com/wituijs/wit-admin.git
 
 # 安装pnpm
 npm install -g pnpm

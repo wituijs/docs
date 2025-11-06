@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: https://gitee.com/wit-ui/docs
+      link: https://github.com/wituijs/docs
     - theme: alt
       text: Demo
       link: http://demo.wit-ui.com/wit-pharm-main/

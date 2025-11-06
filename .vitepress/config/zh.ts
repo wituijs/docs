@@ -18,7 +18,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
   themeConfig: {
     editLink: {
-      pattern: 'https://gitee.com/wit-ui/docs/issues',
+      pattern: 'https://github.com/wituijs/docs/issues',
       text: '对本页提出修改建议',
     },
 
@@ -53,11 +53,11 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         items: [
           {
             text: '问题解答',
-            link: 'https://www.gitee.com/wit-ui/docs/issues',
+            link: 'https://github.com/wituijs/docs/issues',
           },
           {
             text: '更新日志',
-            link: 'https://www.gitee.com/wit-ui/docs/blob/master/CHANGELOG.md',
+            link: 'https://github.com/wituijs/docs',
           },
         ],
       },

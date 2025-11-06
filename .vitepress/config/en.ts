@@ -18,7 +18,7 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
   themeConfig: {
     editLink: {
-      pattern: 'https://gitee.com/wit-ui/docs/issues',
+      pattern: 'https://github.com/wituijs/docs/issues',
       text: 'Suggest changes to this page',
     },
 
@@ -35,11 +35,11 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         items: [
           {
             text: 'Discussions',
-            link: 'https://www.gitee.com/wit-ui/docs/issues',
+            link: 'https://github.com/wituijs/docs/issues',
           },
           {
             text: 'Changelog',
-            link: 'https://www.gitee.com/wit-ui/docs/blob/master/CHANGELOG.md',
+            link: 'https://github.com/wituijs/docs',
           },
         ],
       },
