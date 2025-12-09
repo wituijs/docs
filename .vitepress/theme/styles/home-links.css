@@ -73,6 +73,8 @@ a.cta.vueschool {
   position: relative;
   color: currentColor;
   padding-left: 38px !important;
+  transform: translateY(3px);
+  margin-left: -10px;
 }
 a.cta.vueschool::before {
   content: '';

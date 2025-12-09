@@ -21,9 +21,9 @@ hero:
     - theme: cta mastering-pinia
       text: ' '
       link: https://www.wit-ui.com/pricing.html
-    # - theme: cta vueschool
-    #   text: 观看视频介绍
-    #   link: https://vueschool.io/lessons/introduction-to-pinia?friend=vuerouter&utm_source=pinia&utm_medium=link&utm_campaign=homepage
+    - theme: cta vueschool
+      text: 观看视频介绍
+      link: https://www.bilibili.com/video/BV1bD2UBiEMS/
     # - theme: cta vue-mastery
     #   text: 获取 Pinia 速查表
     #   link: https://www.vuemastery.com/pinia?coupon=PINIA-DOCS&via=eduardo
