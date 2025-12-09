@@ -54,7 +54,7 @@ const list = computed(() =>
 )
 const translations = {
   'en-US': 'Silver Sponsors',
-  'zh': '赞助商',
+  'zh': '使用者',
 }
 </script>
 
