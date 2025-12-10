@@ -231,7 +231,7 @@ yarn cache clean
 了解整个框架的工作流程，会对我们以后开发有很大的帮助，以下是框架访问一个网页的工作流程，逻辑代码src/wit/plugins/permissions.js
 ```
 
-![img](https://i1.hdslb.com/bfs/new_dyn/76bec159262f2169183b00456064d69b110839220.png)
+![img](https://gcore.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
 
 ```
 - 网站启动后，会加载全局配置
