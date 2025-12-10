@@ -125,9 +125,9 @@ export const sharedConfig = defineConfig({
     search: {
       provider: "algolia",
       options: {
-        appId: "JBX2ZJ89K9",
-        apiKey: "78a0466ad2b7506c2112531f76b2a921",
-        indexName: "wit-ui",
+        appId: "VSBV9FTW22",
+        apiKey: "b0204e94ad5a2f396719b8cffc8f6f6a",
+        indexName: "www_wit_ui_com_vsbv9ftw22_pages",
         locales: { ...zhSearch },
       },
     },

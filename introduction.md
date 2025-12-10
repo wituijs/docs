@@ -5,17 +5,17 @@
   title="Get started with Wit-ui"
 /> -->
 
-<MasteringWit-uiLink
-  href="https://play.gumlet.io/embed/651ecf274c2f339c6860e36b"
-  mp-link="https://masteringWit-ui.com/lessons/the-what-and-why-of-state-management-and-stores"
-  title="Create your own Wit-ui from scratch"
+<MasteringPiniaLink
+  href="https://play.gumlet.io/embed/6938e0277aaaf18e07cbd40b"
+  mp-link="https://www.bilibili.com/video/BV1bD2UBiEMS/"
+  title="观看视频介绍"
 />
 
 Wit-ui 起始于 2019 年 9 月左右的一次某家连锁大药房的数字化项目，包括PMS系统，WMS系统，CRM系统，MES系统，SCM系统等系统集成，还包括P2P平台，P2C平台，视频知识付费平台的搭建，其中载体包括WEB，移动端，桌面端，广告机等，由于系统平台多而庞大，时间紧任务重，我们最终决定采用**微前端架构**，各模块有不同团队开发成子应用，最后集成到一个主应用里面，也就是我们说的，完全解耦、独立部署、不受前端技术框架限制。支持多个子系统集成于一个主系统的大型系统前端架构方案。其中主应用架构与子应用架构均由作者Wit独自完成，后来由作者Wit将其整理与抽离成最终形成微前端架构产品系列：Wit-ui，包含了WEB，移动端，桌面端等前端架构。
 
 ## 为什么你应该使用 Wit-ui？ %{#why-should-i-use-Wit-ui}%
 
-Wit-ui系列架构web端，采用最新前端架构Vue3+Pinia+Vite+TS+Element-plus，支持JavaScript、TypeScript，让开发效率提升8~10倍。桌面端使用[Nwjs](https://nwjs.io/)（支持windows xp系统）或[Electron](https://www.electronjs.org/)架构搭建主进程，渲染进程是由Vue+Element-ui完成，前端工程师也可以无缝对接开发桌面应用，移动端使用[Uniapp x](https://doc.dcloud.net.cn/uni-app-x/)（跨平台应用开发引擎，uts语言开发移动原生应用，同样是vue语法，前端工程师也可以无缝对接开发移动应用，uts在iOS平台编译为swift、在Android平台编译为kotlin、在Web和小程序平台编译为js、在鸿蒙next平台上编译为ArkTS。从而，前端开发人员即可开发多端应用了。Wit-ui系列架构，还有如下功能：
+Wit-ui 系列为各端开发提供了高效、统一的架构方案：<br><br><strong>web端：</strong>采用最新前端架构Vue3+Pinia+Vite+TS+Element-plus，支持JavaScript、TypeScript，让开发效率提升8~10倍。<br><br><strong>桌面端：</strong>使用[Nwjs](https://nwjs.io/)（支持windows xp系统）或[Electron](https://www.electronjs.org/)架构搭建主进程，渲染进程是由Vue+Element-ui完成，前端工程师也可以无缝对接开发桌面应用。<br><br><strong>移动端：</strong>使用[Uniapp](https://doc.dcloud.net.cn/uni-app-x/)，跨平台框架技术，同样是vue语法，同一套前端架构，同样的开发方式，前端工程师可以无缝对接开发移动应用，支持安卓/苹果/鸿蒙/小程序开发。<br><br>Wit-ui系列架构，还有如下功能：
 
 - 精致页面与交互：几百个精致页面与几十种产品交互，由原腾讯王者荣耀的产品经理设计指导评审。
 - 后台业务接口：有400多个后台API接口从0开始到产品上线。
