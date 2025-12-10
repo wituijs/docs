@@ -21,7 +21,7 @@
 
 ## 🔊 支持多端
 
-**PC 端 web 前端架构：Vue3+Pinia+Vite+TS+Element-plus，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
+**web前端架构：Vue3+Pinia+Vite+TS+Element-plus，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
 
 **移动端跨平台前端架构：Uniapp+Vue3+Pinia+Vite+TS+WotDesignUni+TuniaoUI 支持 VScode 编辑器开发，项目地址：https://gitee.com/wit-ui/wit-pharm-app.git 开源**
 
@@ -34,17 +34,17 @@
 ## 🔊 安装说明
 
 ```bash
-# win10安装node：node-v18.20.4-x64.msi(https://nodejs.org/download/release/v18.20.4/node-v18.20.4-x64.msi)
+# win10安装node：node-v20.19.1-x64.msi(https://nodejs.org/download/release/v20.19.1/node-v20.19.1-x64.msi)
 # vscode中文版插件：Chinese (Simplified)（必须安装）
 # vscode快速生成语法糖模板: element-plus-helper（vue页面中输入wit-指令即可快速生成语法糖模板/输入el-快速生成代码）（必须安装）
 # vscode代码校验: Eslint（必须安装）
 # css编译时格式校验: stylelint（必须安装）
 # vue3 Ts格式化:Vue - Official（必须安装）
-# import 引入自动补全:Auto Import（必须安装）
-# 自动补全 html 标签:Auto Close Tag（推荐安装）
-# 自动重命名 html 标签:Auto Rename Tag（推荐安装）
-# 查看你引入的依赖模块大小:Import Cost（可不安装）
-# 查查看 git 提交历史:Git History（可不安装）
+# import 引入自动补全: Auto Import（必须安装）
+# 自动补全 html 标签: Auto Close Tag（推荐安装）
+# 自动重命名 html 标签: Auto Rename Tag（推荐安装）
+# 查看你引入的依赖模块大小: Import Cost（可不安装）
+# 查查看 git 提交历史: Git History（可不安装）
 
 # 克隆项目
 git clone https://github.com/wituijs/wit-admin.git
@@ -144,7 +144,6 @@ yarn cache clean
 | | ├── witMount # 预加载
 | | ├── witNav # 顶部navBar
 | | ├── witNotice # 通知
-| | ├── witPagination # 分页
 | | ├── witQueryForm # 顶部查询条件布局封装
 | | ├── witRefresh # 刷新
 | | ├── witRightTools # 工具栏
@@ -166,8 +165,9 @@ yarn cache clean
 │ ├── styles # 公用样式
 │ └── index.ts # main.ts文件执行入口
 ├── public
-│ ├── img # pwa图标
+│ ├── html # pwa图标
 │ ├── static # 静态资源
+│ ├── preload.js # 预加载脚本/配置api
 │ └── favicon.ico # favicon图标
 ├── src
 │ ├── api # API 服务模块
@@ -182,12 +182,14 @@ yarn cache clean
 │ │ └── index.ts # 自定义hooks函数入口
 │ ├── plugins # 业务组件
 | | ├── witSeach # 搜索
-| | ├── witTable # 表格
+| | ├── witTable # 虚拟滚动表格
+| | ├── witTableV2 # 虚拟滚动表格
 | | ├── witPagination # 分页
 | | ├── witSteps # 步骤条
 | | ├── witTree # 树形
+| | ├── witTreeV2 # 虚拟滚动树形
 | | ├── witEditor # AI富文本
-| | ├── witDeepseek # AI对话框
+| | ├── witAiChat # AI对话框
 | | ├── witChart # 图表
 | | ├── witCity # 城市选择
 | | ├── witConfirm # 确认弹框
@@ -195,14 +197,20 @@ yarn cache clean
 | | ├── witCount # 数字格式化
 | | ├── witDataSelector # 日期选择
 | | ├── witDesignForm # 表单设计器
+| | ├── witDraggable # 可拖拽组件
 | | ├── witFullScreenProgress # 进度条
 | | ├── witIconSelector # 图标选择器
+| | ├── witImageViewer # 图片查看器
+| | ├── witLottiePlayer # lottie动画播放
 | | ├── witMagnifier # 放大镜
 | | ├── witMdEditor # md文件解析器
 | | ├── witPaneSplit # 分屏
+| | ├── witPdfViewer # pdf查看器
 | | ├── witPrint # 打印
 | | ├── witQrCode # 二维码生成
 | | ├── witResultNotify # 结果提示
+| | ├── witSeamlessScroll # 无缝滚动
+| | ├── witSelectDialog # 选择器对话框
 | | ├── witSplit # 拖拽分屏
 | | ├── witTooltip # 提示
 │ │ └── witUpdate # 上传
@@ -223,7 +231,7 @@ yarn cache clean
 了解整个框架的工作流程，会对我们以后开发有很大的帮助，以下是框架访问一个网页的工作流程，逻辑代码src/wit/plugins/permissions.js
 ```
 
-![img](https://gcore.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
+![img](https://i1.hdslb.com/bfs/new_dyn/76bec159262f2169183b00456064d69b110839220.png)
 
 ```
 - 网站启动后，会加载全局配置
