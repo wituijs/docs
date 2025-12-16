@@ -32,6 +32,7 @@ export const slugify = (str: string): string =>
 
 export const sharedConfig = defineConfig({
   // base: "./",
+  lang: "zh-CN",
   outDir: "dist",
   title: "Wit-ui",
   appearance: "dark",
@@ -126,7 +127,7 @@ export const sharedConfig = defineConfig({
       provider: "algolia",
       options: {
         appId: "VSBV9FTW22",
-        apiKey: "b0204e94ad5a2f396719b8cffc8f6f6a",
+        apiKey: "d3ec1a7ab9681dad7978e5d762a27666",
         indexName: "www_wit_ui_com_vsbv9ftw22_pages",
         locales: { ...zhSearch },
       },
