@@ -19,6 +19,10 @@
       "imgSrcLight": "https://www.wit-ui.com/banners/hc-light.png"
     },
     {
+      "imgSrcDark": "https://www.wit-ui.com/banners/yf-dark.png",
+      "imgSrcLight": "https://www.wit-ui.com/banners/yf-light.png"
+    },
+    {
       "imgSrcDark": "https://www.wit-ui.com/banners/ty-dark.png",
       "imgSrcLight": "https://www.wit-ui.com/banners/ty-light.png"
     },
