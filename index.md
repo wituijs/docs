@@ -95,12 +95,16 @@ function sleep(ms: any) {
 watch(eyeState, (newState) => {
   if (newState === 1) {
     // 闭眼时
-     document.querySelector('.image-src-kai').style.display = 'none'
-     document.querySelector('.image-src-bi').style.display = 'block'
+    if (document.querySelector('.image-src-kai') &&  document.querySelector('.image-src-bi')){
+      document.querySelector('.image-src-kai').style.display = 'none'
+      document.querySelector('.image-src-bi').style.display = 'block'
+    }
   } else {
     // 睁眼时
+    if (document.querySelector('.image-src-kai') &&  document.querySelector('.image-src-bi')){
      document.querySelector('.image-src-kai').style.display = 'block'
      document.querySelector('.image-src-bi').style.display = 'none'
+    }
   }
 })
 
