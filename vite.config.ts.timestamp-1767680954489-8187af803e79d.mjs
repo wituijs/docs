@@ -1,0 +1,17 @@
+// vite.config.ts
+import { defineConfig } from "file:///F:/wit-ui/docs/node_modules/.pnpm/vite@5.2.10_@types+node@20.12.7/node_modules/vite/dist/node/index.js";
+var vite_config_default = defineConfig({
+  clearScreen: false,
+  plugins: [],
+  define: {
+    __DEV__: "true",
+    __BROWSER__: "true"
+  },
+  optimizeDeps: {
+    exclude: ["vue-demi", "@vueuse/shared", "@vueuse/core"]
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcudHMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJGOlxcXFx3aXQtdWlcXFxcZG9jc1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9maWxlbmFtZSA9IFwiRjpcXFxcd2l0LXVpXFxcXGRvY3NcXFxcdml0ZS5jb25maWcudHNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL0Y6L3dpdC11aS9kb2NzL3ZpdGUuY29uZmlnLnRzXCI7aW1wb3J0IHsgZGVmaW5lQ29uZmlnLCBQbHVnaW4gfSBmcm9tICd2aXRlJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHtcclxuICBjbGVhclNjcmVlbjogZmFsc2UsXHJcbiAgcGx1Z2luczogW1xyXG4gIF0sXHJcbiAgZGVmaW5lOiB7XHJcbiAgICBfX0RFVl9fOiAndHJ1ZScsXHJcbiAgICBfX0JST1dTRVJfXzogJ3RydWUnLFxyXG4gIH0sXHJcbiAgb3B0aW1pemVEZXBzOiB7XHJcbiAgICBleGNsdWRlOiBbJ3Z1ZS1kZW1pJywgJ0B2dWV1c2Uvc2hhcmVkJywgJ0B2dWV1c2UvY29yZSddLFxyXG4gIH0sXHJcbn0pIl0sCiAgIm1hcHBpbmdzIjogIjtBQUFrTyxTQUFTLG9CQUE0QjtBQUV2USxJQUFPLHNCQUFRLGFBQWE7QUFBQSxFQUMxQixhQUFhO0FBQUEsRUFDYixTQUFTLENBQ1Q7QUFBQSxFQUNBLFFBQVE7QUFBQSxJQUNOLFNBQVM7QUFBQSxJQUNULGFBQWE7QUFBQSxFQUNmO0FBQUEsRUFDQSxjQUFjO0FBQUEsSUFDWixTQUFTLENBQUMsWUFBWSxrQkFBa0IsY0FBYztBQUFBLEVBQ3hEO0FBQ0YsQ0FBQzsiLAogICJuYW1lcyI6IFtdCn0K

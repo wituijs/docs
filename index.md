@@ -11,7 +11,7 @@ hero:
   image:
     src: /logokai.png
     alt: Wit-ui
-    className: "VPImage image-src image-src-kai"
+    id: "image-src-kai"
   actions:
     - theme: brand
       text: 开始使用
@@ -95,15 +95,15 @@ function sleep(ms: any) {
 watch(eyeState, (newState) => {
   if (newState === 1) {
     // 闭眼时
-    if (document.querySelector('.image-src-kai') &&  document.querySelector('.image-src-bi')){
-      document.querySelector('.image-src-kai').style.display = 'none'
-      document.querySelector('.image-src-bi').style.display = 'block'
+    if (document.querySelector('#image-src-kai') &&  document.querySelector('#image-src-bi')){
+      document.querySelector('#image-src-kai').style.display = 'none'
+      document.querySelector('#image-src-bi').style.display = 'block'
     }
   } else {
     // 睁眼时
-    if (document.querySelector('.image-src-kai') &&  document.querySelector('.image-src-bi')){
-     document.querySelector('.image-src-kai').style.display = 'block'
-     document.querySelector('.image-src-bi').style.display = 'none'
+    if (document.querySelector('#image-src-kai') &&  document.querySelector('#image-src-bi')){
+     document.querySelector('#image-src-kai').style.display = 'block'
+     document.querySelector('#image-src-bi').style.display = 'none'
     }
   }
 })
@@ -115,7 +115,8 @@ onMounted(() => {
     const img = document.createElement('img');
     img.src = '/logobi.png';  
     img.alt = 'Wit-ui';
-    img.className = 'VPImage image-src image-src-bi';
+    img.className = 'VPImage image-src';
+    img.id = 'image-src-bi';
 
     const secondChild = firstChild.nextElementSibling;
     container.insertBefore(img, secondChild);
