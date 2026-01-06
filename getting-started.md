@@ -13,7 +13,7 @@
 
 ## vscode插件安装说明 %{#shuoming}%
 
-- windows11安装node：[node-v18.20.4-x64](https://nodejs.org/download/release/v18.20.4/node-v18.20.4-x64.msi)
+- windows11安装node：[node-v20.19.1-x64](https://nodejs.org/download/release/v20.19.1/node-v20.19.1-x64.msi)
 - vscode中文版插件：Chinese (Simplified)（可不安装）
 - vscode快速生成语法糖模板: element-plus-helper（vue页面中输入wit-指令即可快速生成语法糖模板/输入el-快速生成代码）（必须安装）
 - vscode代码校验: Eslint（必须安装）
