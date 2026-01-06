@@ -9,8 +9,9 @@ hero:
   text: "大型系统 \nMonorepo模块化微前端架构"
   tagline: "完全解耦、独立部署、不受前端技术框架限制。\n一个代码库里统一管理多个项目，每个项目都是一个独立的前端应用。"
   image:
-    src: /logo.png
+    src: /logokai.png
     alt: Wit-ui
+    className: "VPImage image-src image-src-kai"
   actions:
     - theme: brand
       text: 开始使用
@@ -19,7 +20,7 @@ hero:
       text: Demo 演示
       link: http://demo.wit-ui.com/wit-pharm-main/
     - theme: cta mastering-pinia
-      text: ' '
+      text: " "
       link: https://www.wit-ui.com/pricing.html
     - theme: cta vueschool
       text: 观看视频介绍
@@ -43,8 +44,80 @@ features:
     details: Monorepo通过pnpm workspaces将主应用、多个微应用以及共享的组件和工具库集中在一个代码仓库中。
 ---
 
-<script setup>
+<script setup lang="ts">
+import { ref, onMounted, watch } from 'vue'
 import HomeSponsors from '.vitepress/theme/components/HomeSponsors.vue'
+
+const eyeState = ref(0)
+const isBlinking = ref(false)
+const rotation = ref(0)
+
+// 执行单次眨眼动画
+async function blinkOnce() {
+  isBlinking.value = true
+
+  // 闭眼
+  eyeState.value = 1
+  await sleep(260) // 闭眼持续时间
+
+  // 睁眼
+  eyeState.value = 0
+  await sleep(260) // 睁眼持续时间
+
+  isBlinking.value = false
+}
+
+// 随机时间后触发眨眼
+function scheduleBlink() {
+  if (isBlinking.value) return
+
+  // 随机间隔时间（1-3秒）
+  const randomDelay = 1000 + Math.random() * 2000
+  setTimeout(() => {
+    doubleBlink().then(scheduleBlink)
+  }, randomDelay)
+}
+
+// 执行连续两次眨眼
+async function doubleBlink() {
+  if (isBlinking.value) return
+
+  await blinkOnce()
+  await sleep(50) // 两次眨眼之间的间隔
+  await blinkOnce()
+}
+
+// 辅助函数：模拟sleep
+function sleep(ms: any) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+watch(eyeState, (newState) => {
+  if (newState === 1) {
+    // 闭眼时
+     document.querySelector('.image-src-kai').style.display = 'none'
+     document.querySelector('.image-src-bi').style.display = 'block'
+  } else {
+    // 睁眼时
+     document.querySelector('.image-src-kai').style.display = 'block'
+     document.querySelector('.image-src-bi').style.display = 'none'
+  }
+})
+
+onMounted(() => {
+  if(!document.querySelector('.image-src-bi')) {
+    const container = document.querySelector('.image-container');
+    const firstChild = container.firstElementChild;
+    const img = document.createElement('img');
+    img.src = '/logobi.png';  
+    img.alt = 'Wit-ui';
+    img.className = 'VPImage image-src image-src-bi';
+
+    const secondChild = firstChild.nextElementSibling;
+    container.insertBefore(img, secondChild);
+  }
+  scheduleBlink()
+})
 </script>
 
 <HomeSponsors />
