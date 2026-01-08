@@ -9,7 +9,7 @@
 
 - vscode
 - git
-- node.js 18以上
+- node.js 20以上
 
 ## vscode插件安装说明 %{#shuoming}%
 
