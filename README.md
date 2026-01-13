@@ -23,7 +23,7 @@
 
 **web前端架构：Vue3+Pinia+Vite+TS+Element-plus，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
 
-**移动端跨平台前端架构方案1：Uniapp+Vue3+Pinia+Vite+TS+WotDesignUni+TuniaoUI 支持 VScode 编辑器开发，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
+**移动端跨平台前端架构方案1：Uniapp+Vue3+Pinia+Vite+TS 支持 VScode 编辑器开发，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
 
 **移动端跨平台前端架构方案2：Flutter+GetX 支持 VScode 编辑器开发，项目地址：[获取地址](https://www.wit-ui.com/pricing.html) 不开源**
 
