@@ -25,6 +25,9 @@ hero:
     - theme: cta vueschool
       text: 观看视频介绍
       link: https://www.bilibili.com/video/BV1bD2UBiEMS/
+    - theme: cta vueschool
+      text: 视频演示截图即代码
+      link: https://www.bilibili.com/video/BV1cCGb6SEN5/
     # - theme: cta vue-mastery
     #   text: 获取 Pinia 速查表
     #   link: https://www.vuemastery.com/pinia?coupon=PINIA-DOCS&via=eduardo
