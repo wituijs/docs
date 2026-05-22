@@ -85,6 +85,21 @@ export const sharedConfig = defineConfig({
       },
     ],
 
+    // 百度统计
+    [
+      "script",
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac8827940afef25b13b258620ac158e2";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `,
+    ],
+
     ...(isProduction ? productionHead : []),
   ],
 
