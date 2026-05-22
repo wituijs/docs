@@ -2,11 +2,11 @@
 layout: home
 
 title: Wit-ui
-titleTemplate: 大型系统 Monorepo模块化微前端架构，完全解耦、独立部署、不受前端技术框架限制。一个代码库里统一管理多个项目，每个项目都是一个独立的前端应用，Wit-ui支持桌面端/web端/小程序端/移动端/web端脚手架：快速构成企业级中后台前端解决方案。
+titleTemplate: 精准Skill锁边界 AI智能填充 截图即代码 让开发效率×8，大型系统 Monorepo模块化微前端架构，完全解耦、独立部署、不受前端技术框架限制。一个代码库里统一管理多个项目，每个项目都是一个独立的前端应用，Wit-ui支持桌面端/web端/小程序端/移动端/web端脚手架：快速构成企业级中后台前端解决方案。
 
 hero:
   name: Wit-ui
-  text: "大型系统 \nMonorepo模块化微前端架构"
+  text: "精准Skill锁边界\nAI智能填充 截图即代码\n让开发效率×8"
   tagline: "完全解耦、独立部署、不受前端技术框架限制。\n一个代码库里统一管理多个项目，每个项目都是一个独立的前端应用。"
   image:
     src: /logokai.png
@@ -31,9 +31,9 @@ hero:
 
 features:
   - title: 💡 主流前端技术架构
-    details: 采用最新前端架构Vue3+Pinia+Vite+TS+Element-plus，支持JavaScript、TypeScript，让开发效率提升8~10倍。
+    details: 采用最新前端架构Vue3+Pinia+Vite+TS+Element-plus，支持JavaScript、TypeScript，精准Skills控制，让开发效率提升8~10倍。
   - title: ⚙️ 自动智能化
-    details: 各类组件自动化导入，智能化检查TS语法错误与提示都能给你更好的开发体验。
+    details: 各类组件自动化导入，智能化检查TS语法错误与提示都能给你更好的开发体验，声明式Skill定边界，截图即代码上生产。
   - title: 🛠️ 集成常用组件多达几十种
     details: 统一的搜索区域组件与表格区域组件等各类大数据展示组件，统一UI风格，代码书写格式与渲染性能优化。
   - title: 📰 集成几十种产品页面交互效果
