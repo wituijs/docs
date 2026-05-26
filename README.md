@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Wit-ui大型系统微前端架构-多端</h1>
-<h2>精准Skill控权，AI智能填码——Wit-UI定义面向AI编程新范式。</h2>
+<h2 align="center">精准Skill控权，AI智能填码——Wit-UI定义面向AI编程新范式。</h2>
 <h2 align="center">Vue3+Pinia+Vite+TS+Element-plus</h2>
 <p align="center">
 ✈️ <a href="https://www.wit-ui.com">官方网站 (推荐)</a>&nbsp;
