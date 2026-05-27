@@ -2,50 +2,127 @@
 layout: home
 
 title: Wit-ui
-titleTemplate: Large-scale system multi-terminal modular micro-frontend architecture, fully decoupled, independently deployed, and not restricted by the front-end technology framework. Supports large-scale system front-end architecture solutions that integrate multiple subsystems into one main system.
+titleTemplate: "Precise Skill boundaries, AI intelligent filling, screenshot to code, 8x development efficiency. Large-scale system Monorepo modular micro-frontend architecture, fully decoupled, independent deployment, not limited by frontend technology frameworks. Manage multiple projects in one codebase, each project is an independent frontend application. Wit-ui supports desktop/web/mini-program/mobile/web scaffolding: quickly build enterprise-level mid-backend frontend solutions."
 
 hero:
   name: Wit-ui
-  text: Large-scale system multi-terminal Modular micro-frontend architecture
-  tagline: Completely decoupled, independently deployed, and not restricted by the front-end technology framework. Supports large-scale system front-end architecture solutions that integrate multiple subsystems into one main system.
+  text: "Precise Skill boundaries\nAI intelligent filling Screenshot to code\n8x development efficiency"
+  tagline: "Fully decoupled, independent deployment, not limited by frontend technology frameworks.\nManage multiple projects in one codebase, each project is an independent frontend application."
   image:
-    src: /logo.png
-    alt: Pinia
+    src: /logokai.png
+    alt: Wit-ui
+    id: "image-src-kai"
   actions:
     - theme: brand
       text: Get Started
-      link: https://github.com/wituijs/docs
+      link: /en/introduction.html
     - theme: alt
       text: Demo
       link: http://demo.wit-ui.com/wit-pharm-main/
     - theme: cta mastering-pinia
-      text: ' '
+      text: " "
       link: https://www.wit-ui.com/pricing.html
-    # - theme: cta vueschool
-    #   text: Watch Video Introduction
-    #   link: https://vueschool.io/lessons/introduction-to-pinia?friend=vuerouter&utm_source=pinia&utm_medium=link&utm_campaign=homepage
-    # - theme: cta vue-mastery
-    #   text: Get the Pinia Cheat Sheet
-    #   link: https://www.vuemastery.com/pinia?coupon=PINIA-DOCS&via=eduardo
+    - theme: cta vueschool
+      text: Watch Video Introduction
+      link: https://www.bilibili.com/video/BV1bD2UBiEMS/
+    - theme: cta vueschool
+      text: Screenshot to Code Demo
+      link: https://www.bilibili.com/video/BV1cCGb6SEN5/
 
 features:
-  - title: 💡 Mainstream front-end technology architecture
-    details: It adopts the latest front-end architecture Vue3+Pinia+Vite+TS+Element-plus, supports JavaScript and TypeScript, and increases development efficiency by 8~10 times.
-  - title: ⚙️ Automatic intelligence
-    details: Automatic import of various components, intelligent checking of TS syntax errors and prompts can give you a better development experience.
-  - title: 🛠️ Integrate dozens of commonly used components
-    details: Unified search area components, table area components and other big data display components, unified UI style, code writing format and rendering performance optimization.
-  - title: 📰 Integrate dozens of product page interactive effects
-    details: There is no need to design effect pictures or produce product prototypes. You can directly write pages on the front end to save project release time. A complex front-end page interaction can be achieved with just a few lines of code.
-  - title: 🖼️ Exquisite UI interface and sophisticated business interaction components
-    details: A total of 5 layouts, 3 themes, and countless color combinations have been completed, covering most usage scenarios. At the same time, large-screen templates and portal templates are integrated to greatly improve development efficiency.
-  - title: 💻 Multi-terminal support
-    details: Responsive adaptation capabilities for all screen sizes (compatible with computers, mobile phones, and tablets), including nwjs (supports Windows XP system) and electron desktop application architecture and uniappx and reactNative mobile application architecture.
+  - title: 💡 Mainstream Frontend Architecture
+    details: Using the latest frontend architecture Vue3+Pinia+Vite+TS+Element-plus, supporting JavaScript and TypeScript with precise Skills control, boosting development efficiency by 8-10x.
+  - title: ⚙️ Automatic Intelligence
+    details: Automatic component importing, intelligent TS syntax error checking and hints for better development experience, declarative Skill boundaries, screenshot to code for production.
+  - title: 🛠️ Dozens of Common Components
+    details: Unified search area and table area components for various big data displays, consistent UI style, code format and rendering performance optimization.
+  - title: 📰 Dozens of Product Interaction Effects
+    details: No need for design mockups or product prototypes, frontend can write pages directly, saving project time. Complex page interactions with just a few lines of code.
+  - title: 🖼️ Beautiful UI and Smart Business Components
+    details: 5 layouts, 3 themes, countless color combinations covering most use cases, with dashboard templates and portal templates for maximum efficiency.
+  - title: 💻 Monorepo Unified Management and Efficient Reuse
+    details: Monorepo uses pnpm workspaces to centralize main app, multiple micro-apps, and shared component libraries in one repository.
 ---
 
-<script setup>
-import HomeSponsors from '../.vitepress/theme/components/HomeSponsors.vue'
-import '../.vitepress/theme/styles/home-links.css'
+<script setup lang="ts">
+import { ref, onMounted, watch } from 'vue'
+import HomeSponsors from '@theme/components/HomeSponsors.vue'
+
+const eyeState = ref(0)
+const isBlinking = ref(false)
+const rotation = ref(0)
+
+// 执行单次眨眼动画
+async function blinkOnce() {
+  isBlinking.value = true
+
+  // 闭眼
+  eyeState.value = 1
+  await sleep(260) // 闭眼持续时间
+
+  // 睁眼
+  eyeState.value = 0
+  await sleep(260) // 睁眼持续时间
+
+  isBlinking.value = false
+}
+
+// 随机时间后触发眨眼
+function scheduleBlink() {
+  if (isBlinking.value) return
+
+  // 随机间隔时间（1-3秒）
+  const randomDelay = 1000 + Math.random() * 2000
+  setTimeout(() => {
+    doubleBlink().then(scheduleBlink)
+  }, randomDelay)
+}
+
+// 执行连续两次眨眼
+async function doubleBlink() {
+  if (isBlinking.value) return
+
+  await blinkOnce()
+  await sleep(50) // 两次眨眼之间的间隔
+  await blinkOnce()
+}
+
+// 辅助函数：模拟sleep
+function sleep(ms: any) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+watch(eyeState, (newState) => {
+  if (newState === 1) {
+    // 闭眼时
+    if (document.querySelector('#image-src-kai') &&  document.querySelector('#image-src-bi')){
+      document.querySelector('#image-src-kai').style.display = 'none'
+      document.querySelector('#image-src-bi').style.display = 'block'
+    }
+  } else {
+    // 睁眼时
+    if (document.querySelector('#image-src-kai') &&  document.querySelector('#image-src-bi')){
+     document.querySelector('#image-src-kai').style.display = 'block'
+     document.querySelector('#image-src-bi').style.display = 'none'
+    }
+  }
+})
+
+onMounted(() => {
+  if(!document.querySelector('.image-src-bi')) {
+    const container = document.querySelector('.image-container');
+    const firstChild = container.firstElementChild;
+    const img = document.createElement('img');
+    img.src = '/logobi.png';  
+    img.alt = 'Wit-ui';
+    img.className = 'VPImage image-src';
+    img.id = 'image-src-bi';
+
+    const secondChild = firstChild.nextElementSibling;
+    container.insertBefore(img, secondChild);
+  }
+  scheduleBlink()
+})
 </script>
 
 <HomeSponsors />

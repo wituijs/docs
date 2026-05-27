@@ -49,7 +49,7 @@ features:
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
-import HomeSponsors from '.vitepress/theme/components/HomeSponsors.vue'
+import HomeSponsors from '@theme/components/HomeSponsors.vue'
 
 const eyeState = ref(0)
 const isBlinking = ref(false)

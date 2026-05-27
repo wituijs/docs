@@ -1,66 +1,54 @@
-# Getting Started
+# Development Configuration Recommendations %{#jianyi}%
 
-## Installation
+- M1 + 8G or higher configuration Mac computer (strongly recommend using Apple Mac Studio or Apple MacBook Pro)
+- Windows 11 + i7 + 16G RAM + SSD
+- Development tools: VSCode or WebStorm (please do not use other tools)
+- Browser debugging tools (edge > 99.0.1150.39 or chrome > 99.0.1150.39)
 
-<VueMasteryLogoLink for="pinia-cheat-sheet">
-</VueMasteryLogoLink>
+## Essential Software for Frontend Development %{#bibei}%
 
-Install `pinia` with your favorite package manager:
+- vscode
+- git
+- node.js 20 or above
+
+## VSCode Plugin Installation Instructions %{#shuoming}%
+
+- Windows 11 install node: [node-v20.19.1-x64](https://nodejs.org/download/release/v20.19.1/node-v20.19.1-x64.msi)
+- VSCode Chinese language plugin: Chinese (Simplified) (optional)
+- VSCode quick syntax sugar template generation: element-plus-helper (enter wit- command in vue page to quickly generate syntax sugar template / enter el- to quickly generate code) (must install)
+- VSCode code linting: Eslint (must install)
+- CSS compilation format validation: stylelint (must install)
+- Vue3 TS formatting: Vue - Official (must install)
+- Import auto-completion: Auto Import (must install)
+- Auto-complete HTML tags: Auto Close Tag (recommended)
+- Auto-rename HTML tags: Auto Rename Tag (recommended)
+- View imported dependency module sizes: Import Cost (optional)
+- View git commit history: Git History (optional)
 
 ```bash
-yarn add pinia
-# or with npm
-npm install pinia
+# Clone project
+git clone https://www.....com/wit-ui/wit-pharm-main.git
+
+# Install pnpm
+npm install -g pnpm
+
+# Install dependencies (pnpm, yarn, cnpm, npm all work, pnpm recommended)
+pnpm i
+
+# Local development
+pnpm run dev
+
+# Build production environment
+pnpm run build:pro
+
+# Build test environment
+pnpm run build:test
+
+# Build development environment
+pnpm run build:dev
+
 ```
 
 :::tip
-If your app is using Vue <2.7, you also need to install the composition api: `@vue/composition-api`. If you are using Nuxt, you should follow.
+When debugging micro-frontend applications locally, you need to configure the `VITE_APP_WUJIE_HOST` parameter in the main application's `env.development` file to the local sub-application IP address, including http protocol and port. This configuration is only effective in development environment, no need to configure for production and test environments.
 :::
-
-If you are using the Vue CLI, you can instead give this [**unofficial plugin**](https://github.com/wobsoriano/vue-cli-plugin-pinia) a try.
-
-Create a pinia instance (the root store) and pass it to the app as a plugin:
-
-```js {1,5-6,8}
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
-
-const pinia = createPinia()
-const app = createApp(App)
-
-app.use(pinia)
-app.mount('#app')
-```
-
-If you are using Vue 2, you also need to install a plugin and inject the created `pinia` at the root of the app:
-
-```js {1,3-4,12}
-import { createPinia, PiniaVuePlugin } from 'pinia'
-
-Vue.use(PiniaVuePlugin)
-const pinia = createPinia()
-
-new Vue({
-  el: '#app',
-  // other options...
-  // ...
-  // note the same `pinia` instance can be used across multiple Vue apps on
-  // the same page
-  pinia,
-})
-```
-
-This will also add devtools support. In Vue 3, some features like time traveling and editing are still not supported because vue-devtools doesn't expose the necessary APIs yet but the devtools have way more features and the developer experience as a whole is far superior.
-
-## What is a Store?
-
-A Store (like Pinia) is an entity holding state and business logic that isn't bound to your Component tree. In other words, **it hosts global state**. It's a bit like a component that is always there and that everybody can read off and write to. It has **three concepts**, the [state](./core-concepts/state.md), [getters](./core-concepts/getters.md) and [actions](./core-concepts/actions.md) and it's safe to assume these concepts are the equivalent of `data`, `computed` and `methods` in components.
-
-## When should I use a Store
-
-A store should contain data that can be accessed throughout your application. This includes data that is used in many places, e.g. User information that is displayed in the navbar, as well as data that needs to be preserved through pages, e.g. a very complicated multi-step form.
-
-On the other hand, you should avoid including in the store local data that could be hosted in a component instead, e.g. the visibility of an element local to a page.
-
-Not all applications need access to a global state, but if yours need one, Pinia will make your life easier.

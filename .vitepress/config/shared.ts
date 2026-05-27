@@ -1,5 +1,6 @@
 import { defineConfig, HeadConfig } from "vitepress";
 import { zhSearch } from "./zh";
+import { enSearch } from "./en";
 
 export const META_IMAGE = "";
 export const isProduction =
@@ -32,7 +33,6 @@ export const slugify = (str: string): string =>
 
 export const sharedConfig = defineConfig({
   // base: "./",
-  lang: "zh-CN",
   outDir: "dist",
   title: "Wit-ui",
   appearance: "dark",
@@ -129,7 +129,7 @@ export const sharedConfig = defineConfig({
         appId: "VSBV9FTW22",
         apiKey: "d3ec1a7ab9681dad7978e5d762a27666",
         indexName: "www_wit_ui_com_vsbv9ftw22_pages",
-        locales: { ...zhSearch },
+        locales: { ...zhSearch, ...enSearch },
       },
     },
 
