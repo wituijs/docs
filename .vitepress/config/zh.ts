@@ -102,6 +102,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             { text: 'witTreeV2<br>虚拟树形', link: '/core-concepts/witTreeV2.html' },
             { text: 'witEditor<br>AI富文本', link: '/core-concepts/witEditor.html' },
             { text: 'witAiChat<br>AI对话框', link: '/core-concepts/witAiChat.html' },
+            { text: 'witPlayer<br>AI视频播放器', link: '/core-concepts/witPlayer.html' },
             { text: 'witChart<br>图表', link: '/core-concepts/witChart.html' },
             { text: 'witCity<br>城市选择', link: '/core-concepts/witCity.html' },
             { text: 'witConfirm<br>确认弹框', link: '/core-concepts/witConfirm.html' },

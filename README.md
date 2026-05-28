@@ -2,6 +2,10 @@
     <img alt="logo" src="https://www.wit-ui.com/logo.png" width="200">
 </p>
 
+<p align="center">
+  <a href="README.md">简体中文</a> | <a href="README_EN.md">English</a>
+</p>
+
 <h1 align="center">Wit-ui大型系统微前端架构-多端</h1>
 <h2 align="center">精准Skill控权，AI智能填码——Wit-UI定义面向AI编程新范式。</h2>
 <h2 align="center">Vue3+Pinia+Vite+TS+Element-plus</h2>
@@ -195,6 +199,8 @@ main # 微前端--主应用模块
 | | ├── witEditor # AI富文本
 | | ├── witAiChat # AI对话框
 | | ├── witChart # 图表
+| | ├── witChat # 聊天框
+| | ├── witPlayer # 视频播放器
 | | ├── witCity # 城市选择
 | | ├── witConfirm # 确认弹框
 | | ├── witContextMenu # 右键菜单

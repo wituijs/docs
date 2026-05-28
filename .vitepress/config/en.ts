@@ -101,6 +101,7 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             { text: 'witTreeV2<br>Virtual Tree', link: '/en/core-concepts/witTreeV2.html' },
             { text: 'witEditor<br>AI Rich Text', link: '/en/core-concepts/witEditor.html' },
             { text: 'witAiChat<br>AI Chat Dialog', link: '/en/core-concepts/witAiChat.html' },
+            { text: 'witPlayer<br>AI Video Player', link: '/en/core-concepts/witPlayer.html' },
             { text: 'witChart<br>Chart', link: '/en/core-concepts/witChart.html' },
             { text: 'witCity<br>City Selection', link: '/en/core-concepts/witCity.html' },
             { text: 'witConfirm<br>Confirm Dialog', link: '/en/core-concepts/witConfirm.html' },
